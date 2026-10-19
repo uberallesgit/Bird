@@ -26,7 +26,7 @@ version = 1.0
 
 # (list) Application requirements
 # openpyxl нужен для работы с Excel, kivy для интерфейса, et-xmlfile - зависимость openpyxl
-requirements = python3,kivy==2.3.0,openpyxl,et-xmlfile
+requirements = python3==3.12.9,hostpython3==3.12.9,kivy==2.3.0,openpyxl,et-xmlfile
 
 # (str) Presplash of the Application
 # presplash.filename = %(source.dir)s/data/presplash.png
