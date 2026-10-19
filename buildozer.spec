@@ -26,11 +26,11 @@ version = 1.0
 
 # (list) Application requirements
 # openpyxl нужен для работы с Excel, kivy для интерфейса, et-xmlfile - зависимость openpyxl
-requirements = python3==3.11.9,hostpython3==3.11.9,kivy==2.3.0,pyjnius,openpyxl,et-xmlfile
+requirements = python3==3.11.9,hostpython3==3.11.9,kivy==2.3.0,pyjnius,openpyxl,et-xmlfile,pip==23.3.2
 # (str) Presplash of the Application
 # presplash.filename = %(source.dir)s/data/presplash.png
 # Добавьте в раздел [app]
-p4a.branch = master
+p4a.branch = develop
 p4a.extra_args = --quiet
 
 # (str) Icon of the Application
@@ -134,7 +134,8 @@ android.ndk = 25b
 #p4a.local_recipes =
 
 # (str) Filename to the pip requirements file for your application
-#p4a.pip_options =
+# Добавьте эту строку в раздел [app]
+p4a.pip_options = --upgrade-strategy only-if-needed
 
 #
 # Cython direct build
