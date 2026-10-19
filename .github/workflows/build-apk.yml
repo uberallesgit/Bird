@@ -30,9 +30,9 @@ jobs:
       - name: Build APK with Buildozer
         run: |
           # Очистка кеша (опционально, но полезно при ошибках)
-          # rm -rf ~/.buildozer
-          buildozer -v android debug
-
+          rm -rf ~/.buildozer
+          yes | buildozer -v android debug
+          
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
