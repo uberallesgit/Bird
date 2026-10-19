@@ -1,0 +1,72 @@
+#:kivy 2.0
+
+<MDTextInput>:
+    multiline: True
+    font_size: '13sp'
+
+<ReportRoot>:
+    orientation: 'vertical'
+    padding: 8
+    spacing: 6
+
+    Label:
+        text: 'Формирование ежедневной сводки ЦТЭиСО'
+        size_hint_y: None
+        height: '32dp'
+        font_size: '18sp'
+        bold: True
+
+    # --- Путь к site_not_air ---
+    BoxLayout:
+        size_hint_y: None
+        height: '40dp'
+        spacing: 4
+        TextInput:
+            text: root.om_path
+            hint_text: 'Путь к site_not_air_*.xlsx'
+            on_text: root.om_path = self.text
+        Button:
+            text: '…'
+            size_hint_x: None
+            width: '48dp'
+            on_release: root.pick_om()
+
+    # --- Путь к Список аварий ---
+    BoxLayout:
+        size_hint_y: None
+        height: '40dp'
+        spacing: 4
+        TextInput:
+            text: root.alarms_path
+            hint_text: 'Путь к Список аварий*.xlsx'
+            on_text: root.alarms_path = self.text
+        Button:
+            text: '…'
+            size_hint_x: None
+            width: '48dp'
+            on_release: root.pick_alarms()
+
+    # --- СЦ ---
+    BoxLayout:
+        size_hint_y: None
+        height: '40dp'
+        spacing: 4
+        Label:
+            text: 'СЦ:'
+            size_hint_x: None
+            width: '60dp'
+        TextInput:
+            text: root.sc_name
+            on_text: root.sc_name = self.text
+
+    # --- Кнопка ---
+    Button:
+        text: 'Сформировать отчёт'
+        size_hint_y: None
+        height: '48dp'
+        on_release: root.generate()
+
+    # --- Вывод результата ---
+    MDTextInput:
+        text: root.report_text
+        readonly: True
