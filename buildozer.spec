@@ -29,6 +29,9 @@ version = 1.0
 requirements = python3==3.13.9,hostpython3==3.13.9,kivy==2.3.1,openpyxl,et-xmlfile
 # (str) Presplash of the Application
 # presplash.filename = %(source.dir)s/data/presplash.png
+# Добавьте в раздел [app]
+p4a.branch = master
+p4a.extra_args = --quiet
 
 # (str) Icon of the Application
 # icon.filename = %(source.dir)s/data/icon.png
