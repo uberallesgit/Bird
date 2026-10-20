@@ -31,8 +31,8 @@ requirements = python3==3.13.9,hostpython3==3.13.9,kivy==2.3.1,pyjnius,openpyxl,
 # presplash.filename = %(source.dir)s/data/presplash.png
 # Добавьте в раздел [app]
 p4a.branch = develop
-p4a.extra_args = --quiet
-
+p4a.extra_args = --no-svg
+p4a.bootstrap = sdl2
 # (str) Icon of the Application
 # icon.filename = %(source.dir)s/data/icon.png
 
