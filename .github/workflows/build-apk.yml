@@ -28,6 +28,11 @@ jobs:
           pip install git+https://github.com/kivy/buildozer.git
           pip install cython==0.29.34
 
+      - name: Clean cache
+        run: |
+          rm -rf .buildozer
+          rm -rf bin
+
       - name: Build APK with Buildozer
         run: |
           # Очистка кеша (опционально, но полезно при ошибках)
