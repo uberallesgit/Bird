@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11' # Стабильная версия для сборки
+          python-version: '3.13' # Стабильная версия для сборки
 
       - name: Install system dependencies
         run: |
